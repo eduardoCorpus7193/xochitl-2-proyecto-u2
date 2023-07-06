@@ -40,31 +40,6 @@ class Queue:
     def peek(self):
         # Peek the front element of the queue without removing it
         if self.is_empty():
+            print("The queue is empty")
             return None
         return self.front.data
-"""
-# Create a queue
-my_queue = Queue()
-
-# Enqueue elements into the queue
-my_queue.enqueue(1)
-my_queue.enqueue(2)
-my_queue.enqueue(3)
-
-# Peek the front element of the queue
-print(my_queue.peek())  # Output: 1
-
-# Dequeue elements from the queue
-print(my_queue.dequeue())  # Output: 1
-print(my_queue.dequeue())  # Output: 2
-
-# Check if the queue is empty
-print(my_queue.is_empty())  # Output: False
-
-# Dequeue another element from the queue
-print(my_queue.dequeue())  # Output: 3
-
-# Check if the queue is empty again
-print(my_queue.is_empty())  # Output: True
-
-"""
