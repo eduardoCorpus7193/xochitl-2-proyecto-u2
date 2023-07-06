@@ -7,7 +7,10 @@ myStack = ds_stack.Stack()
 myLinkedList = ds_linked_list.LinkedList()
 print("Welcome")
 
+
+# While to repeat the main menu
 while True:
+	# While to repeat the menu of each option
 	while True:
 		try:
 			option = int(input("Choose the option\n1.- Queue\n2.- Stack\n3.- Linked list\n4.- Exit\nYour answer: "))
@@ -24,6 +27,7 @@ while True:
 			opt = int(input("\nYou choose queue, what do you want to do?\n1.- Check if the queue is empty\n2.- Enqueue\n3.- Dequeue\n4.- Peek\n5.- Exit\nYour answer: "))
 			if opt==1:
 				print("\nYou choosed 'Check if the queue is empty'")
+				# is_empty method returns a boolean, checking the value to know if the queue os empty or not
 				if(myQueue.is_empty()):
 					print("\nThe queue is empty")
 				else:
@@ -31,14 +35,17 @@ while True:
 			elif opt==2:
 				print("You choosed 'Enqueue'")
 				data = input("Intruduce the new element\nYour answer:")
+				# The enqueue method ask for the value to add as a parameter
 				myQueue.enqueue(data)
 				print(data, " enqueued succesfully")
 			elif opt==3:
 				print("You choosed 'Dequeue'")
+				# dequeue method returns the value dequeued
 				dequeuedData = myQueue.dequeue()
 				print (dequeuedData, " dequeued succesfully")
 			elif opt==4:
 				print("You choosed 'Peek'")
+				# peek method returns the the firts value added
 				dataFront = myQueue.peek()
 				print("The value is: ", dataFront)
 			elif opt==5:
@@ -51,6 +58,7 @@ while True:
 			opt = int(input("\nYou choose stack, what do you want to do?\n1.- Check if is_empty\n2.- push\n3.- pop\n4.- peek\n5.- Exit\nYour answer: "))
 			if opt==1:
 				print("\nYou choosed 'Check if the stack is empty'")
+				# is_empty method returns a boolean, checking the value to know if the queue os empty or not
 				if(myStack.is_empty()):
 					print("\nThe stack is empty")
 				else:
@@ -58,14 +66,17 @@ while True:
 			elif opt==2:
 				print("You choosed 'Push'")
 				data = input("Intruduce the new element\nYour answer:")
+				# The push method ask for the value to add as a parameter
 				myStack.push(data)
 				print(data, " stack succesfully")
 			elif opt==3:
 				print("You choosed 'pop'")
+				# pop method returns the value deleted
 				popeed_data = myStack.pop()
 				print (popeed_data, " popped succesfully")
 			elif opt==4:
 				print("You choosed 'Peek'")
+				# peek method returns the the last value added
 				topData = myStack.peek()
 				print("The value is: ", topData)
 			elif opt==5:
@@ -103,10 +114,9 @@ while True:
 			elif optQ==6:
 				print("You choose 'Exit'")
 				break
-		break
-
+		
 	# Option for exit
 	elif option==4:
 		print("Thank u! we love u teacher")
 		break
-	break
+	
